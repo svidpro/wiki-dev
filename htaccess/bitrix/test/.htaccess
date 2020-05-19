@@ -1,0 +1,36 @@
+# Ниже приведенный код требует тестирования
+
+# Установка кеширования статичных файлов на 1 год
+# На обычном хостинге Timeweb не устанавливается, так как управление идет черзе nginx
+# Требуется протестировать на хостинге reg.ru, определить где-то это может пригодится, воообще, или нет?
+# Так как даже, если использовать на VDS, то там скорее всего настраивается также через nginx
+#<filesMatch ".(jpg|jpeg|gif|png|svg|js|css|mp3|ogg|mpe?g|avi|zip|gz|bz2?|rar|swf|woff|eot|ttf|pdf|mp4|exe|doc|html|flv|ico|xml|txt|css|ogg|ogv|svg|svgz|eot|otf|woff|mp4|ttf|rss|atom|jpg|jpeg|gif|png|ico|zip|tgz|gz|rar|bz2|doc|xls|exe|ppt|tar|mid|midi|wav|bmp|rtf)$">
+  #Header set Cache-Control "max-age=31536000, public"
+#</filesMatch>
+
+# Были попытки использовать данных код на Фармапаке при улучшении показателей google speed
+# Но это также ничего не дало, время кеширование не изменялось
+# Оставлено  также для теста
+#<IfModule mod_expires.c>
+  #ExpiresActive on
+  #ExpiresByType text/html "access plus 1 year"
+  #ExpiresByType image/jpeg "access plus 1 year"
+  #ExpiresByType image/gif "access plus 1 year"
+  #ExpiresByType image/png "access plus 1 year"
+  #ExpiresByType text/css "access plus 1 year"
+  #ExpiresByType application/javascript "access plus 1 year"
+  #ExpiresByType application/x-javascript "access plus 1 year"
+#</IfModule>
+
+# Данный код размещен на Фармапаке при улучшении показателей google speed
+# Есть ли польза от данного когда - не известно
+# Оставлено  также для теста
+#<IfModule mod_deflate.c>
+    #<IfModule mod_filter.c>
+        #AddOutputFilterByType DEFLATE text/html text/plain text/xml
+        #AddOutputFilterByType DEFLATE text/css
+        #AddOutputFilterByType DEFLATE application/x-javascript application/javascript application/ecmascript
+        #AddOutputFilterByType DEFLATE application/rss+xml
+        #AddOutputFilterByType DEFLATE application/xml
+    #</IfModule>
+#</IfModule>

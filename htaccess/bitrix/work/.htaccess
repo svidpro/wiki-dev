@@ -1,0 +1,72 @@
+Options -Indexes
+ErrorDocument 404 /404.php
+
+<IfModule mod_php5.c>
+	php_flag session.use_trans_sid off
+	#php_value display_errors 1
+    #php_value display_startup_errors 1
+    #php_value error_reporting E_ALL
+	#php_flag default_charset UTF-8
+	php_value mbstring.func_overload 2
+    php_value mbstring.internal_encoding UTF-8
+</IfModule>
+
+<IfModule mod_php7.c>
+	php_flag session.use_trans_sid off
+	#php_value display_errors 1
+    #php_value display_startup_errors 1
+    #php_value error_reporting E_ALL
+	#php_flag default_charset UTF-8
+	php_value mbstring.func_overload 2
+    php_value mbstring.internal_encoding UTF-8
+</IfModule>
+
+<IfModule mod_rewrite.c>
+	Options +FollowSymLinks
+	RewriteEngine On
+
+	# Переадресация с http на https
+	RewriteCond %{HTTP:X-HTTPS} !1
+ 	RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+	# Добавляем /(слеш) в конец
+	RewriteCond %{REQUEST_URI} ^(.*/[^/\.]+)$
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1/ [R=301,L]
+
+	# убираем повторы слеш (//) более двух раз
+	RewriteCond %{THE_REQUEST} //
+	RewriteRule .* /$0 [R=301,L]
+
+	# Переадресовываем с index.php
+	RewriteCond %{THE_REQUEST} /(.*)index.php.*$
+	RewriteCond %{THE_REQUEST} !bitrix/admin/
+	RewriteRule .* /%1 [R=301,L]
+
+	# Переадресовываем с index.html
+	RewriteCond %{THE_REQUEST} /(.*)index.html.*$
+	RewriteRule .* /%1 [R=301,L]
+
+	# Переадресовываем с index.htm
+	RewriteCond %{THE_REQUEST} /(.*)index.htm.*$
+	RewriteRule .* /%1 [R=301,L]
+
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-l
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !/bitrix/urlrewrite.php$
+	RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
+	RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
+</IfModule>
+
+<IfModule mod_dir.c>
+	DirectoryIndex index.php index.html
+</IfModule>
+
+<IfModule mod_expires.c>
+	ExpiresActive on
+	ExpiresByType image/jpeg "access plus 3 day"
+	ExpiresByType image/gif "access plus 3 day"
+	ExpiresByType image/png "access plus 3 day"
+	ExpiresByType text/css "access plus 3 day"
+	ExpiresByType application/javascript "access plus 3 day"
+</IfModule>
