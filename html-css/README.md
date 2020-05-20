@@ -19,6 +19,12 @@
 }
 ```
 
+- [Box-Shadow CSS3: тень блока (примеры)](https://prowebmastering.ru/box-shadow.html)<br>
+Легкая тень
+```
+box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+```
+
 - пустой HTML шаблон
 ```html
 <!DOCTYPE html>
