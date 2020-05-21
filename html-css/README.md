@@ -45,3 +45,5 @@ box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
  </body>
 </html>
 ```
+
+- ```min-height: 100vh;``` - по высоте экрана
