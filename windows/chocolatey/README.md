@@ -4,7 +4,7 @@
 - [how to install](https://chocolatey.org/install)
 - [Установка PowerShell в Windows](https://docs.microsoft.com/ru-ru/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-7)
 - [commands-list](https://chocolatey.org/docs/commands-list)
-- запуск PowerShell под администратором 
+- :heavy_exclamation_mark: :heavy_exclamation_mark: :heavy_exclamation_mark: запуск PowerShell под администратором, иначе не хватит прав для установки 
 
 ```
 choco search <filter> [<options/switches>]
