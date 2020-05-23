@@ -8,5 +8,6 @@
 
 ```
 choco search <filter> [<options/switches>]
-choco install ruby 2.7.1.1 -y
+choco install <package name> -y
+choco install <package name version> -y
 ```
