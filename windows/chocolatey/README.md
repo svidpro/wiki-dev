@@ -11,3 +11,5 @@ choco search <filter> [<options/switches>]
 choco install <package name> -y
 choco install <package name version> -y
 ```
+
+- 
