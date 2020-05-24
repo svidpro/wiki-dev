@@ -9,6 +9,12 @@
     - set theme
     	- ```jt -t chesterish```
     	- ```jt -t chesterish -T -N``` - toggle toolbar ON and notebook name ON
+    	- update custom.css ```C:\Users\Иван\.jupyter\custom```
+```css
+.cm-s-ipython span.cm-header {
+	color: bisque;
+}
+```
 - [install through condo](/windows/condo)
 
 ## Источники
