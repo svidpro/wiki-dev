@@ -3,6 +3,9 @@
 ## Jupiter 
 
 - [Jupiter Lab](https://jupyter.org/)
+
+### Hot to install
+- [install through condo](/windows/condo)
 - [jupyter-themes dark themes](https://github.com/dunovank/jupyter-themes) or [alternative](https://userstyles.org/styles/177019/jupyterlab-solarized)
     - ```pip install jupyterthemes```
     - [solve problem](/python) ```pip is configured with locations that require TLS/SSL, however the ssl module in Python is not available.```
@@ -15,9 +18,8 @@
 	color: bisque;
 }
 ```
-- [install through condo](/windows/condo)
 
-## Источники
+### Links
 
 - [How to Take Notes Like a Programmer](https://alopatindev.github.io/2018/01/14/how-to-take-notes-like-a-programmer/)
 - [Как легко оптимизировать Jupyter Notebook. Часть 1](https://nuancesprog.ru/p/4529/)
