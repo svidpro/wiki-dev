@@ -25,3 +25,10 @@ C помощью [Conda](https://docs.conda.io/en/latest/index.html) можно:
 - Установить пакеты из PyPI, используя pip в активной среде Conda.
 
 [Источник](https://python.ivan-shamaev.ru/guide-conda-environments-anaconda-python-data-science-platform/)
+
+## pip for windows
+
+При правильной установке - ставится вместе с установкой python
+
+- Problem: ``` pip is configured with locations that require TLS/SSL, however the ssl module in Python is not available.```
+- Solve: install [OpenSSL](https://slproweb.com/products/Win32OpenSSL.html)
