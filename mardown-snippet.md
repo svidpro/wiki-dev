@@ -9,4 +9,8 @@
 
 :heavy_exclamation_mark: <br>
 
-Some Markdown text with <span style="color:blue">some *blue* text</span>.
+:recycle: <br>
+
+:black_large_square: :white_large_square: :white_check_mark: <br>
+
+:heavy_check_mark: :ballot_box_with_check: <br>
