@@ -12,4 +12,4 @@ choco install <package name> -y
 choco install <package name version> -y
 ```
 
-- 
+:recycle: сформировать набор пакетов при переустановки windows
