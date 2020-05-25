@@ -1,5 +1,7 @@
 # HTML & CSS решения
 
+- [Footnote (сноска)](./footnote)
+
 - ресайз видео под ширину экрана (при вставке через iframe) [статья](https://html5book.ru/adaptivnoe-video/)
 ```
 .video-wrap {
