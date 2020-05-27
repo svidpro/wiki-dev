@@ -15,6 +15,7 @@ Add custom property for control blocks input.
 		"USER_PROPERTY" => array(""),// for example, UF_ORG_INN
 		"USER_PROPERTY_NAME" => "",
 		// custom params
+		"SOCSERV_ENABLED" => "N",
 		"INCLUDE_FORUM" => "N",
 		"INCLUDE_BLOG" => "N",
 		"INCLUDE_LEARNING" => "N",

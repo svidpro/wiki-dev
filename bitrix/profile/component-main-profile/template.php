@@ -539,7 +539,7 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true)
 		<p class="btn-block"><input type="submit" name="save" value="<?=(($arResult["ID"]>0) ? GetMessage("MAIN_SAVE") : GetMessage("MAIN_ADD"))?>">&nbsp;&nbsp;<input type="reset" value="<?=GetMessage('MAIN_RESET');?>"></p>
 	</form>
 	<?
-	if($arResult["SOCSERV_ENABLED"])
+	if($arResult["SOCSERV_ENABLED"] && $arParams["SOCSERV_ENABLED"] == 'Y')
 	{
 		$APPLICATION->IncludeComponent("bitrix:socserv.auth.split", ".default", array(
 			"SHOW_PROFILES" => "Y",
