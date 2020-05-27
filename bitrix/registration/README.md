@@ -1,5 +1,7 @@
 # Event & template for mail
 
+Письмо с паролем
+
 ## Event
 
 ```php
