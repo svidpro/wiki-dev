@@ -1,6 +1,11 @@
 # HTML & CSS решения
 
+- [codepen.io/svidpro](https://codepen.io/svidpro)
+- [gist.github.com/svidpro](https://gist.github.com/svidpro)
+
 - [Footnote (сноска)](./footnote)
+
+## перенести 
 
 - ресайз видео под ширину экрана (при вставке через iframe) [статья](https://html5book.ru/adaptivnoe-video/)
 ```
